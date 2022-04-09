@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/afragment"
+        android:enabled="true"
+        android:icon="@mipmap/index"
+        android:title="首页"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/bfragment"
+        android:enabled="true"
+        android:icon="@mipmap/cate"
+        android:title="分类"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/cfragment"
+        android:enabled="true"
+        android:icon="@mipmap/cart"
+        android:title="购物车"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/dfragment"
+        android:enabled="true"
+        android:icon="@mipmap/me"
+        android:title="我的"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/efragment"
+        android:enabled="true"
+        android:icon="@mipmap/me"
+        android:title="我的"
+        app:showAsAction="ifRoom" />
+</menu>

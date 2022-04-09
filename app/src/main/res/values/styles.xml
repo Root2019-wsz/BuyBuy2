@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--修改字体和图标的颜色-->
+    <style name="AppTheme.ToolBar" parent="AppTheme">
+        <!--<item name="android:windowActionBarOverlay">@style/ActionButton.Overflow</item>
+        <item name="actionOverflowButtonStyle">@style/ActionButton.Overflow</item>-->
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="actionOverflowMenuStyle">@style/PopupMenu.Overflow</item>
+    </style>
+
+    <!--修改toolbar弹出框的位置-->
+    <style name="PopupMenu.Overflow" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <!--false表示弹出框位置位于toolbar下面-->
+        <item name="overlapAnchor">false</item>
+    </style>
+
+</resources>

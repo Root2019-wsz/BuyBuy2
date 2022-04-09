@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.shenzhe.lib_cache.view_model.MainActivityViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".main.MainActivity">
+        <include
+            android:id="@+id/include"
+            layout="@layout/layout_toolbar"/>
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dl"
+            allowDrawerOpen="true"
+            isOpenDrawer="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 内容区 -->
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/nav_fragment"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
+                    android:layout_marginBottom="50dp"
+                    app:navGraph="@navigation/nav_graph"
+                    app:defaultNavHost="true" />
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/nav_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    app:labelVisibilityMode="labeled"
+                    android:background="@android:color/white"
+                    app:itemIconTint="@drawable/menu_select"
+                    app:menu="@menu/menu">
+                </com.google.android.material.bottomnavigation.BottomNavigationView>
+            </RelativeLayout>
+            <!-- 左边菜单 -->
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navigation_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:headerLayout="@layout/drawer_header"
+                app:menu="@menu/menu_drawer_left"
+                android:layout_gravity="start">
+
+            </com.google.android.material.navigation.NavigationView>
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

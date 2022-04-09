@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/afragment"
+    tools:ignore="UnusedNavigation">
+    <fragment
+        android:id="@+id/afragment"
+        android:name="com.maniu.mn_vip_jetpack_all.main.AFragment"
+        android:label="afragment"
+        tools:layout="@layout/fragment_a">
+        <action
+            android:id="@+id/action_afragment_to_bfragment"
+            app:destination="@id/bfragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/bfragment"
+        android:name="com.maniu.mn_vip_jetpack_all.main.BFragment"
+        android:label="bfragment"
+        tools:layout="@layout/fragment_b">
+        <argument android:name="name" android:defaultValue="Max"/>
+        <!-- 为destination添加<deepLink/>标签 -->
+        <deepLink app:uri="www.YourWebsite.com/{params}" />
+    </fragment>
+    <fragment
+        android:id="@+id/cfragment"
+        android:name="com.maniu.mn_vip_jetpack_all.main.CFragment"
+        android:label="cfragment"
+        tools:layout="@layout/fragment_c">
+    </fragment>
+    <fragment
+        android:id="@+id/dfragment"
+        android:name="com.maniu.mn_vip_jetpack_all.main.DFragment"
+        android:label="dfragment"
+        tools:layout="@layout/fragment_d">
+    </fragment>
+    <fragment
+        android:id="@+id/efragment"
+        android:name="com.maniu.mn_vip_jetpack_all.main.EFragment"
+        android:label="fragment_e"
+        tools:layout="@layout/fragment_e" />
+</navigation>

@@ -1,0 +1,4 @@
+rootProject.name = "BuyBuy"
+include ':app'
+include ':lib_cache'
+include ':lib_common'
